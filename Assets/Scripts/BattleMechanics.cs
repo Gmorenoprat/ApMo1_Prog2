@@ -16,5 +16,8 @@ public class BattleMechanics
         _player.CanAttack = false;
         _anim.SetTrigger("Attack");
         _player.ResetTimerAttack();
+        _player.AttackRange.enabled = true;
+
     }
+
 }

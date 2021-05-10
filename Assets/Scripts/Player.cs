@@ -5,6 +5,8 @@ public class Player : MonoBehaviour
     public float speed;
     public bool isGrounded;
     public bool canAttack;
+    public Collider AttackRange;
+    public int life = 3;
     float canAttackTimer = 0f;
     PlayerController _control;
     Movement _movement;
@@ -17,7 +19,7 @@ public class Player : MonoBehaviour
     {
         _movement = new Movement(this);
         _battleMechanics = new BattleMechanics(this);
-        _control = new PlayerController(_movement, _battleMechanics);
+        _control = new PlayerController(this, _movement, _battleMechanics);
   
     }
 
@@ -26,9 +28,10 @@ public class Player : MonoBehaviour
         _control.OnUpdate();
 
 
-        if (canAttackTimer <= 0) canAttack = true;
-        canAttackTimer -= Time.deltaTime;
+        if (canAttackTimer <= 0) { canAttack = true; AttackRange.enabled = false; }
+            canAttackTimer -= Time.deltaTime;
 
+        if (Input.GetKeyDown(KeyCode.F)) { GetHit(); }
     }
 
     public bool IsGrounded{
@@ -44,9 +47,21 @@ public class Player : MonoBehaviour
     public void ResetTimerAttack()
     {
         canAttackTimer = 1f;
+
     }
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Floor") { IsGrounded = true; }
+    }
+
+    public void GetHit()
+    {
+        life -= 1;
+        if (life <= 0)
+        {
+            this.GetComponent<Animator>().SetBool("isDead", true);
+        }
+        this.GetComponent<Animator>().SetTrigger("getHit");
+
     }
 }
