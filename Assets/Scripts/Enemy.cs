@@ -8,6 +8,7 @@ public abstract class Enemy : MonoBehaviour
     protected Rigidbody _rb;
     public float speed = 1f;
     public bool canMove = true;
+    public Animator anim;
 
     public void Awake()
     {
@@ -25,7 +26,7 @@ public abstract class Enemy : MonoBehaviour
         this.GetComponent<BoxCollider>().enabled = false;
         Vector3 direction = transform.position - tr.position ;
         direction.y = 0.1f;
-        this.GetComponent<Animator>().SetTrigger("Death");
+        anim.SetTrigger("Death");
         _rb.AddForce(direction.normalized * 20f, ForceMode.Impulse);
         Destroy(this.gameObject, 2f);
     }

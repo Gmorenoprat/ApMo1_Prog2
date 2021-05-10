@@ -10,8 +10,9 @@ public class Slime : Enemy
 
     public override void Move()
     {
-        if(canMove)
-         transform.position = Vector3.Lerp(pos1.position, pos2.position, Mathf.PingPong(Time.time * speed, 1.0f));
+        if (canMove)
+            //transform.position = Vector3.Lerp(pos1.position, pos2.position, Mathf.PingPong(Time.time * speed, 1.0f));
+            transform.position += speed * Time.deltaTime * transform.forward;
 
     }
 
@@ -22,12 +23,12 @@ public class Slime : Enemy
         if(other.gameObject == pos1.gameObject)
         {
             Debug.Log("1");
-            transform.LookAt(pos2);
+           this.transform.LookAt(pos2);
         }
         if(other.gameObject == pos2.gameObject)
         {
             Debug.Log("2");
-            transform.LookAt(pos1);
+            this.transform.forward = pos1.position - this.transform.position;
         }
     }
     // Update is called once per frame
