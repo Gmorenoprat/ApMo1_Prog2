@@ -51,7 +51,7 @@ public class Player : MonoBehaviour ,ICollector
     }
     public void ResetTimerAttack()
     {
-        canAttackTimer = 1f;
+        canAttackTimer = 0.6f;
 
     }
     public void OnCollisionEnter(Collision collision)

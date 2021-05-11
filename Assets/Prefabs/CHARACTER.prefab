@@ -56,11 +56,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e616f6d06b90c3e438b2afa1f625a47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   isGrounded: 0
   canAttack: 0
+  shieldOn: 0
+  prefabShield: {fileID: 0}
   AttackRange: {fileID: 565979450}
-  life: 3
+  life: 5
 --- !u!1001 &1841150696330075204
 PrefabInstance:
   m_ObjectHideFlags: 0
