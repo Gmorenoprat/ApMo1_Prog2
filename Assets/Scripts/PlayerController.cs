@@ -6,11 +6,14 @@ public class PlayerController
     Movement _movement;
     BattleMechanics _battle;
 
-    public PlayerController(Player p, Movement m, BattleMechanics b)
+    CheckpointMananger _checkpointMananger;
+
+    public PlayerController(Player p, Movement m, BattleMechanics b, CheckpointMananger c)
     {
         _player = p;
         _movement = m;
         _battle = b;
+        _checkpointMananger = c;
     }
 
     public void OnUpdate()
@@ -33,5 +36,19 @@ public class PlayerController
         {
             _battle.Attack();
         }
+
+        if (Input.GetKeyDown(KeyCode.F2)) SaveCheckPoint();
+        if (Input.GetKeyDown(KeyCode.F3)) LoadCheckPoint();
+    }
+
+    public void SaveCheckPoint()
+    {
+        _checkpointMananger.SaveCheck();
+    }
+    public void LoadCheckPoint()
+    {
+        CheckPoint checktoload = _checkpointMananger.LoadCheck();
+        _player.transform.position = checktoload.lastCheck.lastCheckPos;
+        _player.transform.rotation = checktoload.lastCheck.lastCheckRot;
     }
 }

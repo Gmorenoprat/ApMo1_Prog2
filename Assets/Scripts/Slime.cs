@@ -22,23 +22,20 @@ public class Slime : Enemy
 
         if(other.gameObject == pos1.gameObject)
         {
-            Debug.Log("1");
            this.transform.LookAt(pos2);
         }
         if(other.gameObject == pos2.gameObject)
         {
-            Debug.Log("2");
-            this.transform.forward = pos1.position - this.transform.position;
+            this.transform.LookAt(pos1);
         }
     }
     // Update is called once per frame
     void Update()
     {
         Move();
-      
     }
 
-
+    //Debug
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(pos1.position, pos2.position);

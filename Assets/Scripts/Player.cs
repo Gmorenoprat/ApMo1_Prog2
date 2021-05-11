@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour ,ICollector
 {
     public float speed;
     public bool isGrounded;
     public bool canAttack;
+    public bool shieldOn;
+    public GameObject prefabShield;
     public Collider AttackRange;
     public int life = 3;
+    int _maxLifes = 3;
     float canAttackTimer = 0f;
     PlayerController _control;
     Movement _movement;
     BattleMechanics _battleMechanics;
+    CheckpointMananger _checkpointMananger;
 
 
 
@@ -19,7 +23,8 @@ public class Player : MonoBehaviour
     {
         _movement = new Movement(this);
         _battleMechanics = new BattleMechanics(this);
-        _control = new PlayerController(this, _movement, _battleMechanics);
+        _checkpointMananger = new CheckpointMananger(this);
+        _control = new PlayerController(this, _movement, _battleMechanics, _checkpointMananger);
   
     }
 
@@ -31,7 +36,7 @@ public class Player : MonoBehaviour
         if (canAttackTimer <= 0) { canAttack = true; AttackRange.enabled = false; }
             canAttackTimer -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.F)) { GetHit(); }
+        if (Input.GetKeyDown(KeyCode.F)) { GetHit(); }//Sacar esto 
     }
 
     public bool IsGrounded{
@@ -63,5 +68,17 @@ public class Player : MonoBehaviour
         }
         this.GetComponent<Animator>().SetTrigger("getHit");
 
+    }
+
+    public void GetHp(int hp)
+    {
+        this.life += hp;
+        if (life > _maxLifes) life = _maxLifes;
+    }
+
+    public void GetShield(int a)
+    {
+        shieldOn = true;
+        prefabShield.gameObject.SetActive(true);
     }
 }
