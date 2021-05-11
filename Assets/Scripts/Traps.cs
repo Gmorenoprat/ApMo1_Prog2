@@ -8,7 +8,7 @@ public class Traps : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            FindObjectOfType<Player>().GetHit();
+            FindObjectOfType<Player>().GetHit(1);
         }
     }
 }

@@ -6,7 +6,6 @@ public class Slime : Enemy
 {
 
     public Transform pos1, pos2;
-    Transform target;
 
     public override void Move()
     {

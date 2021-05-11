@@ -37,7 +37,7 @@ public class Player : MonoBehaviour ,ICollector
         if (canAttackTimer <= 0) { canAttack = true; AttackRange.enabled = false; }
             canAttackTimer -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.F)) { GetHit(); _soundMananger.SoundPlay((int)2);}//Sacar esto 
+        if (Input.GetKeyDown(KeyCode.F)) { GetHit(1); _soundMananger.SoundPlay((int)2);}//Sacar esto 
     }
 
     #region Properties
@@ -62,12 +62,14 @@ public class Player : MonoBehaviour ,ICollector
         if (collision.gameObject.tag == "Floor") { IsGrounded = true; }
     }
 
-    public void GetHit()
+    public void GetHit(int damage)
     {
-        life -= 1;
+        _soundMananger.SoundPlay((int)2);
+        life -= damage;
         if (life <= 0)
         {
             this.GetComponent<Animator>().SetBool("isDead", true);
+            this.enabled = false;
         }
         this.GetComponent<Animator>().SetTrigger("getHit");
 
