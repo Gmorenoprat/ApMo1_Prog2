@@ -12,6 +12,7 @@ public class BounceEffect : MonoBehaviour
 
         if (rb != null)
         {
+            rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
         }
         
