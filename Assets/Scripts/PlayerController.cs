@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using Sounds;
+
 
 public class PlayerController
 {
@@ -8,18 +10,22 @@ public class PlayerController
 
     CheckpointMananger _checkpointMananger;
 
-    public PlayerController(Player p, Movement m, BattleMechanics b, CheckpointMananger c)
+    SoundMananger _soundMananger;
+    public PlayerController(Player p, Movement m, BattleMechanics b, CheckpointMananger c, SoundMananger s)
     {
         _player = p;
         _movement = m;
         _battle = b;
         _checkpointMananger = c;
+        _soundMananger = s;
     }
 
     public void OnUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) { 
             _movement.Jump();
+            _soundMananger.SoundPlay((int)sounds.JUMP);
+            }
 
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -35,6 +41,8 @@ public class PlayerController
         if (Input.GetKeyDown(KeyCode.G))
         {
             _battle.Attack();
+            _soundMananger.SoundPlay((int)sounds.ATTACK);
+
         }
 
         if (Input.GetKeyDown(KeyCode.F2)) SaveCheckPoint();
