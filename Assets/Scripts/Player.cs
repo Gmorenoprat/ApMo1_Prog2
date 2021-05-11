@@ -73,6 +73,7 @@ public class Player : MonoBehaviour ,ICollector
 
     }
 
+
     #region CollectableGetters
     public void GetHp(int hp)
     {
