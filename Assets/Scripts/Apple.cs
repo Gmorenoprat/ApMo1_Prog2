@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Apple : MonoBehaviour
+public class Apple : Collectable
 {
     public Rigidbody rb;
 
@@ -11,17 +9,10 @@ public class Apple : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-   
-    void Update()
+    public override void DarStats(Collider other)
     {
-        
+        other.gameObject.GetComponent<ICollector>().GetApple();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            Destroy(this.gameObject);
-        }
-    }
+
 }

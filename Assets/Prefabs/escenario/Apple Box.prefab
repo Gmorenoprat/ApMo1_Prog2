@@ -327,10 +327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  apple: {fileID: 4434220457876811872, guid: 67fc0b146b00c1a48aca47eff0112db5, type: 3}
-  spawn: {fileID: 7616027125959171259}
-  boxCollider: {fileID: 0}
-  mesh: {fileID: 0}
+  apple: {fileID: 4434220457876811875, guid: 67fc0b146b00c1a48aca47eff0112db5, type: 3}
+  crateBreakSound: {fileID: 4352136888508487881, guid: d5eb0d2e8740e9543aecf0138e4fd273,
+    type: 3}
 --- !u!65 &5278750063265984215
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CheckpointMananger : MonoBehaviour
-{
+﻿public class CheckpointMananger
+{ 
     Player _player;
     CheckPoint _checkpoint;
     public CheckpointMananger(Player p)

@@ -5,6 +5,6 @@ using UnityEngine;
 public interface ICollector
 {
     void GetHp(int hp);
-    void GetShield(int shield);
-   // void GetPwr(int pwr);
+    void GetShield();
+    void GetApple();
 }

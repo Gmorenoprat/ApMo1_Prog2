@@ -10,21 +10,22 @@ public class Player : MonoBehaviour ,ICollector
     public Collider AttackRange;
     public int life = 3;
     int _maxLifes = 3;
+    public int apples = 0;
     float canAttackTimer = 0f;
     PlayerController _control;
     Movement _movement;
     BattleMechanics _battleMechanics;
     CheckpointMananger _checkpointMananger;
-
-
-
+    SoundMananger _soundMananger;
+    public AudioClip[] ClipsAudio;
 
     private void Start()
     {
         _movement = new Movement(this);
         _battleMechanics = new BattleMechanics(this);
         _checkpointMananger = new CheckpointMananger(this);
-        _control = new PlayerController(this, _movement, _battleMechanics, _checkpointMananger);
+        _soundMananger = new SoundMananger(this);
+        _control = new PlayerController(this, _movement, _battleMechanics, _checkpointMananger, _soundMananger);
   
     }
 
@@ -36,9 +37,10 @@ public class Player : MonoBehaviour ,ICollector
         if (canAttackTimer <= 0) { canAttack = true; AttackRange.enabled = false; }
             canAttackTimer -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.F)) { GetHit(); }//Sacar esto 
+        if (Input.GetKeyDown(KeyCode.F)) { GetHit(); _soundMananger.SoundPlay((int)2);}//Sacar esto 
     }
 
+    #region Properties
     public bool IsGrounded{
         get {return isGrounded; }
         set {isGrounded = value; } 
@@ -49,9 +51,10 @@ public class Player : MonoBehaviour ,ICollector
         get { return canAttack; }
         set { canAttack = value; }
     }
+    #endregion
     public void ResetTimerAttack()
     {
-        canAttackTimer = 1f;
+        canAttackTimer = 0.6f;
 
     }
     public void OnCollisionEnter(Collision collision)
@@ -70,15 +73,21 @@ public class Player : MonoBehaviour ,ICollector
 
     }
 
+    #region CollectableGetters
     public void GetHp(int hp)
     {
         this.life += hp;
         if (life > _maxLifes) life = _maxLifes;
     }
 
-    public void GetShield(int a)
+    public void GetShield()
     {
         shieldOn = true;
         prefabShield.gameObject.SetActive(true);
+    } 
+    public void GetApple()
+    {
+        this.apples += 1;
     }
+    #endregion
 }

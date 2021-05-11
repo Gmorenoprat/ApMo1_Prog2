@@ -5,8 +5,8 @@ public class Movement
 {
     Player _player;
     Rigidbody _rb;
-    float _jumpForce = 10f;
-    float _speed = 6f;
+    float _jumpForce = 15f;
+    float _speed = 7f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
