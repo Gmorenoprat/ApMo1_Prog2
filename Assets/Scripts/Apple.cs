@@ -11,6 +11,11 @@ public class Apple : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+   
+    void Update()
+    {
+        
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

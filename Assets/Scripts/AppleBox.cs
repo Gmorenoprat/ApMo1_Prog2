@@ -14,9 +14,9 @@ public class AppleBox : MonoBehaviour
         mesh = GetComponent<MeshRenderer>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "HitBoxCollider")
+        if(collision.gameObject.tag == "Player")
         {
             life--;
             if (life <= 0)
@@ -24,6 +24,7 @@ public class AppleBox : MonoBehaviour
                 DestroyAndReward();
             }
         }
+        
     }
 
     public void DestroyAndReward()
