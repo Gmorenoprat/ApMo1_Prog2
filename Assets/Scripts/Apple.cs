@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
+    public Rigidbody rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
    
