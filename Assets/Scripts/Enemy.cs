@@ -9,10 +9,12 @@ public abstract class Enemy : MonoBehaviour
     public float speed = 1f;
     public bool canMove = true;
     public Animator anim;
+    AudioSource _dieSound;
 
     public void Awake()
     {
         _rb = this.GetComponent<Rigidbody>();
+        _dieSound = this.GetComponent<AudioSource>();
     }
         //if (collision.gameObject.tag == "Player") { collision.gameObject.GetComponent<Player>().GetHit(); }
     public virtual void OnTriggerEnter(Collider collision)
@@ -28,6 +30,7 @@ public abstract class Enemy : MonoBehaviour
         direction.y = 0.1f;
         anim.SetTrigger("Death");
         _rb.AddForce(direction.normalized * 20f, ForceMode.Impulse);
+        _dieSound.Play();
         Destroy(this.gameObject, 2f);
     }
 
