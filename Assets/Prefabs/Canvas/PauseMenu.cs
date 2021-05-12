@@ -8,6 +8,9 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseGameUI;
     public GameObject interfaceUI;
+    public GameObject gameOverUI;
+
+    public Player player;
 
     private void Update()
     {
@@ -22,11 +25,21 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+
+        if(player.life <= 0)
+        {
+            Invoke("GameOver", 2f);
+        }
+        else
+        {
+            Resume();
+        }
     }
 
     public void Resume()
     {
         pauseGameUI.SetActive(false);
+        gameOverUI.SetActive(false);
         interfaceUI.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -35,6 +48,14 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseGameUI.SetActive(true);
+        interfaceUI.SetActive(false);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    void GameOver()
+    {
+        gameOverUI.SetActive(true);
         interfaceUI.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
