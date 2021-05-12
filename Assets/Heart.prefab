@@ -103,8 +103,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7649663137164035564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f561d868380a0459b164c25f6c55e7, type: 3}
+  m_Script: {fileID: 11500000, guid: ebf7e0a3b1132da41b5c1fc57abd9eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonido: {fileID: 123585246179440214, guid: 6707cdd3e3d315d4e99d9e64566cbf7f, type: 3}
-  hp: 1
+  sonido: {fileID: 4128104588816589554, guid: ef3daa2b076db1c47863d5d061c8e258, type: 3}

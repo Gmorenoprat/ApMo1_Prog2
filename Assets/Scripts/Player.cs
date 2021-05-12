@@ -9,8 +9,8 @@ public class Player : MonoBehaviour ,ICollector
     public bool shieldOn = false;
     public GameObject prefabShield;
     public Collider AttackRange;
-    public int life = 3;
-    int _maxLifes = 3;
+    public int life = 5;
+    int _maxLifes = 5;
     public bool invencibility = false;
     public int apples = 0;
     float canAttackTimer = 0f;
