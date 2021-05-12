@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7142219322540275169}
   m_Layer: 0
   m_Name: Trap_Needle
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 7312096499583656774}
   m_Layer: 0
   m_Name: FloorTrap
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,11 +251,11 @@ GameObject:
   - component: {fileID: 8312885666245949855}
   - component: {fileID: 8312885666247049183}
   - component: {fileID: 8312885666251228569}
-  - component: {fileID: 403868872}
   - component: {fileID: 4843504940649379723}
+  - component: {fileID: 7838560586388911970}
   m_Layer: 0
   m_Name: Needle
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -334,18 +334,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.45837075, z: 0.5162337}
   m_Center: {x: 0.0019949079, y: 0.22071594, z: -0.00299263}
---- !u!114 &403868872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8312885666249043359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b17f5a32622f77f49a1a042579d1630a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &4843504940649379723
 Animator:
   serializedVersion: 3
@@ -365,3 +353,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7838560586388911970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312885666249043359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1feb6a9fb4c9fc949a6983cb45f44bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  knockback: 10
