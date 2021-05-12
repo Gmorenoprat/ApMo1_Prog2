@@ -5,11 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class winCondition : MonoBehaviour
 {
+    public GameObject winMenu, buttons;
+
     public void OnTriggerEnter(Collider other)
     {
-        if (other != null)
+        if (other.gameObject.tag == "Player")
         {
-            return;
+            other.gameObject.GetComponent<Player>().enabled = false;
+
+            winMenu.gameObject.SetActive(true);
+
+            StartCoroutine(mostrarBotones());
         }
+    }
+
+    public IEnumerator mostrarBotones()
+    {
+        yield return new WaitForSeconds(10);
+        buttons.gameObject.SetActive(true);
+        yield return null;
     }
 }
