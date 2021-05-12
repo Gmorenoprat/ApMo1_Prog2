@@ -38,8 +38,6 @@ public class Player : MonoBehaviour ,ICollector
 
         if (canAttackTimer <= 0) { canAttack = true; AttackRange.enabled = false; }
             canAttackTimer -= Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.F)) { GetHit(1); _soundMananger.SoundPlay((int)2);}//Sacar esto 
     }
 
     #region Properties
