@@ -8,6 +8,10 @@ public class ScoreText : MonoBehaviour
 
     public Player player;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
     void Update()
     {
         lifeText.text = player.life.ToString();

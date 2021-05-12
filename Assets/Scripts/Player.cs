@@ -65,8 +65,12 @@ public class Player : MonoBehaviour ,ICollector
     public void GetHit(int damage)
     {
         _soundMananger.SoundPlay((int)2);
-        
-        if(!invencibility) life -= damage;
+        if (shieldOn)
+        {
+            prefabShield.gameObject.SetActive(false);
+            return;
+        }
+        if (!invencibility) life -= damage;
         StartCoroutine(Invencibility());
         if (life <= 0)
         {
