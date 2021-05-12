@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 7649663137164035564, guid: 91aa0bc3859b6fd459acabf472aa457c,
         type: 3}
       propertyPath: m_Name
-      value: Life
+      value: Heart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91aa0bc3859b6fd459acabf472aa457c, type: 3}
