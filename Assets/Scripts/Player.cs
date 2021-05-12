@@ -6,7 +6,7 @@ public class Player : MonoBehaviour ,ICollector
     public float speed;
     public bool isGrounded;
     public bool canAttack;
-    public bool shieldOn;
+    public bool shieldOn = false;
     public GameObject prefabShield;
     public Collider AttackRange;
     public int life = 3;
@@ -68,6 +68,7 @@ public class Player : MonoBehaviour ,ICollector
         if (shieldOn)
         {
             prefabShield.gameObject.SetActive(false);
+            shieldOn = false;
             return;
         }
         if (!invencibility) life -= damage;
@@ -107,4 +108,15 @@ public class Player : MonoBehaviour ,ICollector
         this.apples += 1;
     }
     #endregion
+    #region Checkpoint
+    internal void SaveCheckPoint()
+    {
+        _control.SaveCheckPoint();
+    }
+    internal void LoadCheckPoint()
+    {
+        _control.LoadCheckPoint();
+    }
+    #endregion
+
 }

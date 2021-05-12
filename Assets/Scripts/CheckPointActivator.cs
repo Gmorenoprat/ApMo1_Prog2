@@ -10,7 +10,7 @@ public class CheckPointActivator : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-           other.gameObject.GetComponent<PlayerController>().SaveCheckPoint();
+            other.gameObject.GetComponent<Player>().SaveCheckPoint();
             playersound.Play(0);
         }
     }
