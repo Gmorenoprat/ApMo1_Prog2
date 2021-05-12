@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  knockback: 20
+  knockback: 5
 --- !u!1001 &4382667318641327839
 PrefabInstance:
   m_ObjectHideFlags: 0

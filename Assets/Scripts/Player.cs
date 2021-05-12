@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Player : MonoBehaviour ,ICollector
 {
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour ,ICollector
     public Collider AttackRange;
     public int life = 3;
     int _maxLifes = 3;
+    public bool invencibility = false;
     public int apples = 0;
     float canAttackTimer = 0f;
     PlayerController _control;
@@ -65,7 +67,9 @@ public class Player : MonoBehaviour ,ICollector
     public void GetHit(int damage)
     {
         _soundMananger.SoundPlay((int)2);
-        life -= damage;
+        
+        if(!invencibility) life -= damage;
+        StartCoroutine(Invencibility());
         if (life <= 0)
         {
             this.GetComponent<Animator>().SetBool("isDead", true);
@@ -73,6 +77,14 @@ public class Player : MonoBehaviour ,ICollector
         }
         this.GetComponent<Animator>().SetTrigger("getHit");
 
+    }
+
+    public IEnumerator Invencibility()
+    {
+        invencibility = true;
+        yield return new WaitForSeconds(1);
+        invencibility = false;
+        yield return null;
     }
 
 
