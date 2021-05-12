@@ -89,7 +89,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7210991212291076870}
   - component: {fileID: 7210991212302278292}
-  - component: {fileID: 560424005}
   m_Layer: 0
   m_Name: Trap2
   m_TagString: Untagged
@@ -132,18 +131,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &560424005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7210991212291303270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b17f5a32622f77f49a1a042579d1630a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7210991212291303288
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +380,7 @@ GameObject:
   - component: {fileID: 7210991212292436862}
   - component: {fileID: 7210991212293501246}
   - component: {fileID: 123589764}
+  - component: {fileID: 5629253809836907008}
   m_Layer: 0
   m_Name: SawBlade
   m_TagString: Untagged
@@ -474,3 +462,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4468539, y: 2.3139632, z: 2.0860214}
   m_Center: {x: 0, y: -0.008888483, z: 0.030809402}
+--- !u!114 &5629253809836907008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7210991212291303294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1feb6a9fb4c9fc949a6983cb45f44bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  knockback: 20

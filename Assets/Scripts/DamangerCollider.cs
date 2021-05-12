@@ -4,12 +4,19 @@ public class DamangerCollider : MonoBehaviour
 {
     public int damage;
     public float knockback = 20f;
+    public bool isLoadCheck = false;
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Player>().GetHit(damage);
             Knockback(collision);
+
+            if(isLoadCheck == true)
+            {
+                collision.gameObject.GetComponent<Player>().LoadCheckPoint();
+            }
         }
     }
 

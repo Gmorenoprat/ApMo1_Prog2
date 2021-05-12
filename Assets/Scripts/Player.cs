@@ -28,7 +28,7 @@ public class Player : MonoBehaviour ,ICollector
         _checkpointMananger = new CheckpointMananger(this);
         _soundMananger = new SoundMananger(this);
         _control = new PlayerController(this, _movement, _battleMechanics, _checkpointMananger, _soundMananger);
-  
+        SaveCheckPoint();
     }
 
     private void Update()
