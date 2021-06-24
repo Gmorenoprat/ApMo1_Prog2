@@ -30,10 +30,7 @@ public class PauseMenu : MonoBehaviour
         {
             Invoke("GameOver", 2f);
         }
-        else
-        {
-            Resume();
-        }
+
     }
 
     public void Resume()
@@ -58,6 +55,6 @@ public class PauseMenu : MonoBehaviour
         gameOverUI.SetActive(true);
         interfaceUI.SetActive(false);
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        GameIsPaused = false;
     }
 }

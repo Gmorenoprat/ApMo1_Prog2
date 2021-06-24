@@ -23,8 +23,8 @@ public class PlayerController
     public void OnUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space)) { 
+            if(_player.isGrounded)_soundMananger.SoundPlay((int)sounds.JUMP);
             _movement.Jump();
-            _soundMananger.SoundPlay((int)sounds.JUMP);
             }
 
         float h = Input.GetAxis("Horizontal");
@@ -45,6 +45,7 @@ public class PlayerController
 
         }
 
+        //test SaveLoad
         if (Input.GetKeyDown(KeyCode.F2)) SaveCheckPoint();
         if (Input.GetKeyDown(KeyCode.F3)) LoadCheckPoint();
     }
