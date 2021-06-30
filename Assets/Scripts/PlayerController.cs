@@ -11,13 +11,15 @@ public class PlayerController
     CheckpointMananger _checkpointMananger;
 
     SoundMananger _soundMananger;
-    public PlayerController(Player p, Movement m, BattleMechanics b, CheckpointMananger c, SoundMananger s)
+    AnimatorMananger _animatorMananger;
+    public PlayerController(Player p, Movement m, BattleMechanics b, CheckpointMananger c, SoundMananger s, AnimatorMananger a)
     {
         _player = p;
         _movement = m;
         _battle = b;
         _checkpointMananger = c;
         _soundMananger = s;
+        _animatorMananger = a;
     }
 
     public void OnUpdate()
@@ -31,16 +33,19 @@ public class PlayerController
         float v = Input.GetAxis("Vertical");
 
         if (v != 0 || h != 0) {
-            _player.GetComponent<Animator>().SetBool("Moving", true);
+            _animatorMananger.Move(true);
+
             _movement.Move(v, h);
         }
-        else _player.GetComponent<Animator>().SetBool("Moving", false);
+        else _animatorMananger.Move(false);
 
 
 
-        if (Input.GetKeyDown(KeyCode.G))
+
+        if (Input.GetKeyDown(KeyCode.G) && _player.CanAttack)
         {
             _battle.Attack();
+            _animatorMananger.Attack();
             _soundMananger.SoundPlay((int)sounds.ATTACK);
 
         }

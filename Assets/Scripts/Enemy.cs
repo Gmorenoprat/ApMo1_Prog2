@@ -16,7 +16,6 @@ public abstract class Enemy : MonoBehaviour
         _rb = this.GetComponent<Rigidbody>();
         _dieSound = this.GetComponent<AudioSource>();
     }
-        //if (collision.gameObject.tag == "Player") { collision.gameObject.GetComponent<Player>().GetHit(); }
     public virtual void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "PlayerAttack") { Die(collision.transform); canMove = false; }

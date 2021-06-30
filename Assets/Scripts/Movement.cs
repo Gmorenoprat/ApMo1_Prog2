@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Movement
 {
+    public Movement(Player p)
+    {
+        _player = p;
+        _rb = _player.GetComponent<Rigidbody>();
+    }
+
     Player _player;
     Rigidbody _rb;
     float _jumpForce = 15f;
@@ -15,11 +21,37 @@ public class Movement
     public float rotSpeed = 6f;
 
 
-    public Movement(Player p)
+    /// <summary>
+    /// Author: Gonzalo Moreno Prat
+    /// SetSpeed
+    /// SetJumpForce
+    /// </summary>
+    #region GETSETERS
+    public float SetSpeed
     {
-        _player = p;
-        _rb = _player.GetComponent<Rigidbody>();
+        get
+        {
+            return _speed;
+        }
+        set
+        {
+            _speed = value;
+        }
     }
+    public float  SetJumpForce
+    {
+        get
+        {
+            return _jumpForce;
+        }
+        set
+        {
+            _jumpForce = value; 
+        }
+    }
+
+    #endregion
+
 
     public void Jump()
     {
@@ -46,5 +78,5 @@ public class Movement
         }
 
     }
-   
+
 }
