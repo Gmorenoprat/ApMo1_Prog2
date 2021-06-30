@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// @Author: Gonzalo Moreno Prat
+/// @Author: Robert Juan Ignacio
+/// </summary>
 public class Player : MonoBehaviour ,ICollector , IHittable
 {
     public float baseSpeed = 7f;
