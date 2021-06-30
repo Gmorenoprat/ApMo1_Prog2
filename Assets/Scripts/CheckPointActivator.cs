@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckPointActivator : MonoBehaviour
 {
-    private bool checkYaActivado = false;
+    public bool checkYaActivado = false;
     public AudioSource playersound;
 
     public void Start()
@@ -15,15 +15,16 @@ public class CheckPointActivator : MonoBehaviour
     {
         Player player = (Player)parameterContainer[0];
         player.gameObject.GetComponent<Player>().SaveCheckPoint();
-        playersound.Play(0);
-        checkYaActivado = true;
+        CheckPointActivator check = (CheckPointActivator)parameterContainer[1];
+        if(!check.checkYaActivado) playersound.Play(0);
+        check.checkYaActivado = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            EventManager.TriggerEvent(EventsType.CHECKPOINT_TRIGGER, other.gameObject.GetComponent<Player>());
+            EventManager.TriggerEvent(EventsType.CHECKPOINT_TRIGGER, other.gameObject.GetComponent<Player>(), this);
         }
     }
 }
