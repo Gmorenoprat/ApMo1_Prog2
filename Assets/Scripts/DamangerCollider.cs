@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class DamangerCollider : MonoBehaviour
 {
@@ -26,4 +27,5 @@ public class DamangerCollider : MonoBehaviour
         direction.y = 0.5f;
         collision.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * knockback, ForceMode.Impulse);
     }
+
 }

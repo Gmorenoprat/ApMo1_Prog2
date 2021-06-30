@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Player : MonoBehaviour ,ICollector
+public class Player : MonoBehaviour ,ICollector , IHittable
 {
-    public float speed;
+    public float baseSpeed = 7f;
+    public float baseJumpForce = 15f;
     public bool isGrounded;
     public bool canAttack;
     public bool shieldOn = false;
+    public float shieldTime = 10f;
     public GameObject prefabShield;
     public Collider AttackRange;
-    public int life = 5;
+    public float life = 5;
     int _maxLifes = 5;
     public bool invencibility = false;
     public int apples = 0;
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour ,ICollector
     BattleMechanics _battleMechanics;
     CheckpointMananger _checkpointMananger;
     SoundMananger _soundMananger;
+    AnimatorMananger _animatorMananger;
     public AudioClip[] ClipsAudio;
 
     private void Start()
@@ -27,14 +30,14 @@ public class Player : MonoBehaviour ,ICollector
         _battleMechanics = new BattleMechanics(this);
         _checkpointMananger = new CheckpointMananger(this);
         _soundMananger = new SoundMananger(this);
-        _control = new PlayerController(this, _movement, _battleMechanics, _checkpointMananger, _soundMananger);
+        _animatorMananger = new AnimatorMananger(this);
+        _control = new PlayerController(this, _movement, _battleMechanics, _checkpointMananger, _soundMananger, _animatorMananger);
         SaveCheckPoint();
     }
 
     private void Update()
     {
         _control.OnUpdate();
-
 
         if (canAttackTimer <= 0) { canAttack = true; AttackRange.enabled = false; }
             canAttackTimer -= Time.deltaTime;
@@ -62,34 +65,43 @@ public class Player : MonoBehaviour ,ICollector
         if (collision.gameObject.tag == "Floor") { IsGrounded = true; }
     }
 
-    public void GetHit(int damage)
+    public void GetHit(float damage)
     {
-        _soundMananger.SoundPlay((int)2);
         if (shieldOn)
         {
-            prefabShield.gameObject.SetActive(false);
-            shieldOn = false;
+            //RemoveShield();
             return;
         }
+        _soundMananger.SoundPlay((int)2);
         if (!invencibility) life -= damage;
-        StartCoroutine(Invencibility());
+        StartCoroutine(Invencibility(1f));
         if (life <= 0)
         {
-            this.GetComponent<Animator>().SetBool("isDead", true);
+            _animatorMananger.Die();
             this.enabled = false;
         }
-        this.GetComponent<Animator>().SetTrigger("getHit");
+        _animatorMananger.GetHit();
 
     }
 
-    public IEnumerator Invencibility()
+
+    public IEnumerator Invencibility(float seconds)
     {
         invencibility = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(seconds);
         invencibility = false;
         yield return null;
     }
 
+    public void ChangeMovementSpeed(float speed)
+    {
+        _movement.SetSpeed = speed;
+    }
+
+    public void ChangeJumpForce(float jumpForce)
+    {
+        _movement.SetJumpForce = jumpForce;
+    }
 
     #region CollectableGetters
     public void GetHp(int hp)
@@ -100,9 +112,17 @@ public class Player : MonoBehaviour ,ICollector
 
     public void GetShield()
     {
+        StartCoroutine(Invencibility(shieldTime));
         shieldOn = true;
         prefabShield.gameObject.SetActive(true);
+        Invoke("RemoveShield", shieldTime);
     } 
+
+    public void RemoveShield()
+    {
+        prefabShield.gameObject.SetActive(false);
+        shieldOn = false;
+    }
     public void GetApple()
     {
         this.apples += 1;
