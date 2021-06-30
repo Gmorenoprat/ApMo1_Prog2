@@ -74,4 +74,5 @@ public enum EventsType
 {
     SPEED_MODIFIER,
     JUMPFORCE_MODIFIER,
+    ACTIVATOR_TRIGGER,
 }

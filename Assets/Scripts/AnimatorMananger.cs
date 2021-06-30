@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Author: Gonzalo Moreno Prat
+/// Author: 
 /// </summary>
 
 public class AnimatorMananger 

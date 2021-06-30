@@ -14,6 +14,8 @@ public class Player : MonoBehaviour ,ICollector , IHittable
     public float life = 5;
     int _maxLifes = 5;
     public bool invencibility = false;
+    public Vector3 normalScale = new Vector3(1, 1, 1);
+    public Vector3 smashedScale = new Vector3(1, 0.1f, 1);
     public int apples = 0;
     float canAttackTimer = 0f;
     PlayerController _control;
@@ -82,6 +84,29 @@ public class Player : MonoBehaviour ,ICollector , IHittable
         }
         _animatorMananger.GetHit();
 
+    }
+
+    public IEnumerator GetSmashedAndLoadCheckAfterSeconds(float seconds)
+    {
+        _soundMananger.SoundPlay((int)2);
+        RemoveShield();
+        if (!invencibility) life -= 1;
+        StartCoroutine(Invencibility(1f));
+        if (life <= 0)
+        {
+            _animatorMananger.Die();
+            this.enabled = false;
+        }
+
+        this.transform.localScale = smashedScale;
+        this.enabled = false;
+
+        yield return new WaitForSeconds(seconds);
+        this.enabled = true;
+        this.transform.localScale = normalScale;
+
+
+        this.LoadCheckPoint();
     }
 
 
