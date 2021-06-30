@@ -11,7 +11,7 @@ public class FallingPlatformActivation : MonoBehaviour
     /// </summary>
     public void Start()
     {
-        EventManager.SubscribeToEvent(EventsType.ACTIVATOR_TRIGGER, ActivateFallingPlatform);
+        EventManager.SubscribeToEvent(EventsType.MOVINGPLATFORM_TRIGGER, ActivateFallingPlatform);
     }
     public void ActivateFallingPlatform(params object[] parameterContainer)
     {
@@ -20,6 +20,7 @@ public class FallingPlatformActivation : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        EventManager.TriggerEvent(EventsType.ACTIVATOR_TRIGGER, fallingPlatform);
+        if (other.gameObject.tag != "Player") return;
+        EventManager.TriggerEvent(EventsType.MOVINGPLATFORM_TRIGGER, fallingPlatform);
     }
 }
