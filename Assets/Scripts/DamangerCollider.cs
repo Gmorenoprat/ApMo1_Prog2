@@ -26,7 +26,7 @@ public class DamangerCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (isLoadCheck == true && collision.gameObject.tag == "Player")
+        if (isBoulder == true && collision.gameObject.tag == "Player")
         {
             StartCoroutine(collision.gameObject.GetComponent<Player>().GetSmashedAndLoadCheckAfterSeconds(secondsBeforeLoad));
             return;

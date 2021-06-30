@@ -44,6 +44,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &2935751331031094078
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7883890871529359508}
+  m_Material: {fileID: 13400000, guid: 5d95307d62f24764cb72c5f24ea0b96e, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.62
+  m_Height: 0.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!82 &-2369278237709487950
 AudioSource:
   m_ObjectHideFlags: 0
@@ -160,34 +174,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e616f6d06b90c3e438b2afa1f625a47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  baseSpeed: 7
+  baseJumpForce: 15
   isGrounded: 0
   canAttack: 0
-  shieldOn: 1
+  shieldOn: 0
+  shieldTime: 10
   prefabShield: {fileID: 3341490287054650855}
   AttackRange: {fileID: 565979450}
   life: 5
   invencibility: 0
+  normalScale: {x: 1, y: 1, z: 1}
+  smashedScale: {x: 1, y: 0.1, z: 1}
   apples: 0
   ClipsAudio:
   - {fileID: 8300000, guid: 28c53ee9edea2244fa776a5357b8fb31, type: 3}
   - {fileID: 8300000, guid: c7f85c95ad440bc46bbcaee7a464bd48, type: 3}
   - {fileID: 8300000, guid: 9f4f5340bd0ebd149bc23b2e2b52c139, type: 3}
   - {fileID: 0}
---- !u!136 &2935751331031094078
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7883890871529359508}
-  m_Material: {fileID: 13400000, guid: 5d95307d62f24764cb72c5f24ea0b96e, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 0.3
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!1001 &1222294146340302961
 PrefabInstance:
   m_ObjectHideFlags: 0
