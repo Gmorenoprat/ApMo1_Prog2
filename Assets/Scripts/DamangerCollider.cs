@@ -6,9 +6,12 @@ public class DamangerCollider : MonoBehaviour
     public int damage;
     public float knockback = 20f;
     public bool isLoadCheck = false;
+    public bool isBoulder = false;
+    public float secondsBeforeLoad = 0f;
 
     public void OnCollisionEnter(Collision collision)
     {
+        if (isBoulder) return;
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Player>().GetHit(damage);
@@ -18,6 +21,16 @@ public class DamangerCollider : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Player>().LoadCheckPoint();
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (isLoadCheck == true && collision.gameObject.tag == "Player")
+        {
+            StartCoroutine(collision.gameObject.GetComponent<Player>().GetSmashedAndLoadCheckAfterSeconds(secondsBeforeLoad));
+            return;
+
         }
     }
 
