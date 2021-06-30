@@ -69,19 +69,15 @@ public class Player : MonoBehaviour ,ICollector , IHittable
 
     public void GetHit(float damage)
     {
-        if (shieldOn)
-        {
-            //RemoveShield();
-            return;
-        }
+        if (shieldOn) return;
         _soundMananger.SoundPlay((int)2);
-        if (!invencibility) life -= damage;
-        StartCoroutine(Invencibility(1f));
         if (life <= 0)
         {
             _animatorMananger.Die();
             this.enabled = false;
         }
+        if (!invencibility) life -= damage;
+        StartCoroutine(Invencibility(1f));
         _animatorMananger.GetHit();
 
     }
@@ -99,12 +95,14 @@ public class Player : MonoBehaviour ,ICollector , IHittable
         }
 
         this.transform.localScale = smashedScale;
+
         this.enabled = false;
+
+        
 
         yield return new WaitForSeconds(seconds);
         this.enabled = true;
         this.transform.localScale = normalScale;
-
 
         this.LoadCheckPoint();
     }

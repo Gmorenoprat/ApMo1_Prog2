@@ -7,22 +7,22 @@ using UnityEngine;
 /// </summary>
 /// 
 [RequireComponent(typeof(Collider))]
-public class BoulderActivator : MonoBehaviour
+public class BoulderDesactivator : MonoBehaviour
 {
     public Boulder boulder;
 
     public void Start()
     {
-        EventManager.SubscribeToEvent(EventsType.ACTIVATOR_TRIGGER, ActivateBoulder);
+        EventManager.SubscribeToEvent(EventsType.DESACTIVATOR_TRIGGER, DesactivateBoulder);
     }
-    public void ActivateBoulder(params object[] parameterContainer)
+    public void DesactivateBoulder(params object[] parameterContainer)
     {
         Boulder boulder = (Boulder)parameterContainer[0];
-        boulder.Activate();
+        boulder.Reset();
     }
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag != "Player") return;
-        EventManager.TriggerEvent(EventsType.ACTIVATOR_TRIGGER, boulder);
+        EventManager.TriggerEvent(EventsType.DESACTIVATOR_TRIGGER, boulder);
     }
 }
