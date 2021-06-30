@@ -6,6 +6,7 @@ public class Movement
     public Movement(Player p)
     {
         _player = p;
+        SetSpeed = _player.baseSpeed;
         _rb = _player.GetComponent<Rigidbody>();
     }
 

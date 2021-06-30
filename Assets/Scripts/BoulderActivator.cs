@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// @Author: 
+/// @Author: Gonzalo Moreno Prat
 /// </summary>
 /// 
 [RequireComponent(typeof(Collider))]

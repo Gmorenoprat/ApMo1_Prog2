@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// @Author: Gonzalo Moreno Prat
+/// </summary>
 [RequireComponent(typeof(DamangerCollider))]
 public class Boulder : MonoBehaviour
 {
@@ -26,14 +30,6 @@ public class Boulder : MonoBehaviour
     void Update()
     {
         LimitateVelocity();
-
-
-        ////DEBUG
-        //if (Input.GetKeyDown(KeyCode.B))
-        //{
-        //    Reset();
-        //}
-
     }
     public void Activate()
     {

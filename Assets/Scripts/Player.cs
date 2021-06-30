@@ -95,15 +95,11 @@ public class Player : MonoBehaviour ,ICollector , IHittable
         }
 
         this.transform.localScale = smashedScale;
-
         this.enabled = false;
-
-        
-
         yield return new WaitForSeconds(seconds);
+        
         this.enabled = true;
         this.transform.localScale = normalScale;
-
         this.LoadCheckPoint();
     }
 
