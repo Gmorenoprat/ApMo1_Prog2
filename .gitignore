@@ -2,3 +2,7 @@
 *.meta
 
 Library/
+
+Temp/
+
+Assets/AmplifyShaderEditor/
