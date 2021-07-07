@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44564992, g: 0.49534273, b: 0.5741974, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -522,7 +521,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 65687101}
@@ -548,7 +547,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -784,7 +782,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 65687101}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1250,7 +1247,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 902333633}
@@ -1276,7 +1273,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1454,7 +1450,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 902333633}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1500,7 +1495,7 @@ Transform:
   m_LocalPosition: {x: -82.23, y: 44.17, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1561374497}
+  - {fileID: 1360568768}
   - {fileID: 1996280088}
   - {fileID: 1749518819}
   m_Father: {fileID: 1583485752}
@@ -2042,9 +2037,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171780284}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 9
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -2102,13 +2096,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171780284}
-  m_LocalRotation: {x: 0.5286103, y: -0.046087343, z: -0.33052677, w: 0.78051215}
+  m_LocalRotation: {x: -0.3657655, y: -0.14106585, z: 0.42958695, w: -0.81349313}
   m_LocalPosition: {x: 1, y: 139, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 52.628002, y: -43.965004, z: -68.481}
+  m_LocalEulerAnglesHint: {x: 45.750004, y: -366.976, z: -58.621002}
 --- !u!1001 &227043499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2477,8 +2471,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 14d074ce1766b4a41ad9b0d45cc4f101, type: 3}
 --- !u!4 &265046484 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1451875835116995217, guid: 14d074ce1766b4a41ad9b0d45cc4f101,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 265046483}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &269614205
@@ -2679,7 +2672,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 561474156}
@@ -2705,7 +2698,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2941,7 +2933,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 561474156}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3418,7 +3409,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 711728180}
@@ -3444,7 +3435,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3680,7 +3670,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 711728180}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3781,8 +3770,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0d4a395fa35440547a13ab2d5bbd93b2, type: 3}
 --- !u!4 &315926638 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4382667319691788462, guid: 0d4a395fa35440547a13ab2d5bbd93b2,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 315926637}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &323494156
@@ -4105,7 +4093,7 @@ Transform:
   - {fileID: 2059209838}
   - {fileID: 845505772}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369084610
 GameObject:
@@ -4151,7 +4139,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 952710025}
@@ -4177,7 +4165,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4413,7 +4400,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 952710025}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4445,7 +4431,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 519488184}
+  - {fileID: 554818552}
   - {fileID: 5315928}
   - {fileID: 1767898110}
   m_Father: {fileID: 1583485752}
@@ -4858,8 +4844,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 14d074ce1766b4a41ad9b0d45cc4f101, type: 3}
 --- !u!4 &387567037 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1451875835116995217, guid: 14d074ce1766b4a41ad9b0d45cc4f101,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 387567036}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &404523126
@@ -5164,7 +5149,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 450530828}
@@ -5190,7 +5175,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5426,17 +5410,10 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 450530828}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!4 &442993190 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4382667319691788462, guid: 0d4a395fa35440547a13ab2d5bbd93b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1468021435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &450206645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5481,7 +5458,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1224685320}
@@ -5507,7 +5484,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5743,7 +5719,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1224685320}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5999,7 +5974,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 376934142}
@@ -6025,7 +6000,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6261,7 +6235,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 376934142}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6310,7 +6283,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 651971051}
@@ -6336,7 +6309,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6572,7 +6544,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 651971051}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6864,12 +6835,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5860138, y: 64.3094, z: 5.000601}
   m_Center: {x: 0.09503937, y: 7.861223, z: -1.3478174}
---- !u!4 &519488184 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4382667319691788462, guid: 0d4a395fa35440547a13ab2d5bbd93b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 554818551}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &523687718
 Mesh:
   m_ObjectHideFlags: 0
@@ -7077,7 +7042,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1330726107}
@@ -7103,7 +7068,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7339,7 +7303,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1330726107}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7965,6 +7928,11 @@ PrefabInstance:
       objectReference: {fileID: 1767898110}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d4a395fa35440547a13ab2d5bbd93b2, type: 3}
+--- !u!4 &554818552 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 554818551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &561474156
 Mesh:
   m_ObjectHideFlags: 0
@@ -8172,7 +8140,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 567657480}
@@ -8198,7 +8166,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8434,7 +8401,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 567657480}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9326,6 +9292,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73095c7b9a9f79841a5e7a2177bed9c7, type: 3}
+--- !u!4 &630799824 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 630799823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &632587095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9395,6 +9366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1c65bb5461e7d349981189263df37f3, type: 3}
+--- !u!4 &632587096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 632587095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &638401753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4432700384067846502, guid: 67fc0b146b00c1a48aca47eff0112db5,
@@ -9781,7 +9757,7 @@ Transform:
   m_LocalPosition: {x: 37.67, y: 46.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 442993190}
+  - {fileID: 1468021436}
   - {fileID: 709614453}
   - {fileID: 1059463610}
   m_Father: {fileID: 1583485752}
@@ -10121,7 +10097,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 523687718}
@@ -10147,7 +10123,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10383,7 +10358,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 523687718}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10432,7 +10406,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 530754030}
@@ -10458,7 +10432,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10694,7 +10667,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 530754030}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10743,7 +10715,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 571661302}
@@ -10769,7 +10741,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11005,7 +10976,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 571661302}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11106,8 +11076,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0d4a395fa35440547a13ab2d5bbd93b2, type: 3}
 --- !u!4 &769381649 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4382667319691788462, guid: 0d4a395fa35440547a13ab2d5bbd93b2,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 769381648}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &781355431 stripped
@@ -11279,12 +11248,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &814358341 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1451875835116995217, guid: 14d074ce1766b4a41ad9b0d45cc4f101,
-    type: 3}
-  m_PrefabInstance: {fileID: 1103872497}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &833940365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11415,7 +11378,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 525933775}
@@ -11441,7 +11404,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11677,7 +11639,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 525933775}
   m_IsSelectable: 1
   m_SelectedFaces: 05000000
   m_SelectedEdges:
@@ -11929,7 +11890,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 296706830}
@@ -11955,7 +11916,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12191,7 +12151,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 296706830}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -12549,10 +12508,10 @@ Transform:
   m_LocalPosition: {x: 0.27891392, y: 12.337004, z: 10.409835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1593878161}
+  - {fileID: 1593878162}
   - {fileID: 1583485752}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &926721551
 GameObject:
@@ -12776,7 +12735,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2145485591}
@@ -12802,7 +12761,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13038,7 +12996,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 2145485591}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -13513,7 +13470,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2117885529}
@@ -13539,7 +13496,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13775,7 +13731,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 2117885529}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -14081,18 +14036,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 814358341}
+  - {fileID: 1103872498}
   - {fileID: 691269454}
   - {fileID: 1458218441}
   m_Father: {fileID: 1583485752}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &991767631 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4546718932400260578, guid: b1c65bb5461e7d349981189263df37f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 632587095}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1010358260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14306,7 +14255,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1593878160}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868210643}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e616f6d06b90c3e438b2afa1f625a47d, type: 3}
@@ -14614,7 +14563,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1427060980}
@@ -14640,7 +14589,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14847,7 +14795,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1427060980}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -14940,7 +14887,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 121331004}
@@ -14966,7 +14913,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15202,7 +15148,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 121331004}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -15524,12 +15469,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1063944916 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1451875835116995217, guid: 14d074ce1766b4a41ad9b0d45cc4f101,
-    type: 3}
-  m_PrefabInstance: {fileID: 1313217283}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1069181483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15985,6 +15924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14d074ce1766b4a41ad9b0d45cc4f101, type: 3}
+--- !u!4 &1103872498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1103872497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1107373265
 Mesh:
   m_ObjectHideFlags: 0
@@ -16225,7 +16169,7 @@ Transform:
   m_LocalPosition: {x: -91.97, y: 43.91, z: -0.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1063944916}
+  - {fileID: 1313217284}
   - {fileID: 1366379888}
   - {fileID: 158602610}
   m_Father: {fileID: 1583485752}
@@ -16381,7 +16325,7 @@ Transform:
   - {fileID: 2123225322}
   - {fileID: 307467788}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1144425447
 GameObject:
@@ -16413,7 +16357,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 963339303}
@@ -16439,7 +16383,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16646,7 +16589,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 963339303}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -16694,7 +16636,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -16712,7 +16654,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16803,7 +16744,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1727748779}
@@ -16829,7 +16770,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17036,7 +16976,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1727748779}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17908,7 +17847,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1349796126}
@@ -17934,7 +17873,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18170,7 +18108,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1349796126}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -18523,6 +18460,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14d074ce1766b4a41ad9b0d45cc4f101, type: 3}
+--- !u!4 &1313217284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1313217283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1324974169
 GameObject:
   m_ObjectHideFlags: 0
@@ -19025,6 +18967,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d4a395fa35440547a13ab2d5bbd93b2, type: 3}
+--- !u!4 &1360568768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1360568767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1366379887
 GameObject:
   m_ObjectHideFlags: 0
@@ -20109,7 +20056,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 814180136}
@@ -20135,7 +20082,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20371,7 +20317,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 814180136}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -20464,7 +20409,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 14909679}
@@ -20490,7 +20435,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20726,7 +20670,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 14909679}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -20825,6 +20768,11 @@ PrefabInstance:
       objectReference: {fileID: 1059463610}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d4a395fa35440547a13ab2d5bbd93b2, type: 3}
+--- !u!4 &1468021436 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1468021435}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1471775282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21164,8 +21112,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 14d074ce1766b4a41ad9b0d45cc4f101, type: 3}
 --- !u!4 &1508430790 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1451875835116995217, guid: 14d074ce1766b4a41ad9b0d45cc4f101,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1508430789}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1540522631
@@ -21212,7 +21159,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1039941606}
@@ -21238,7 +21185,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21474,7 +21420,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1039941606}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -21560,8 +21505,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0db6bc1b6f4d0b44a8eb04f9833a6eea, type: 3}
 --- !u!4 &1545049774 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3918628633370931955, guid: 0db6bc1b6f4d0b44a8eb04f9833a6eea,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1545049773}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1555774849
@@ -21668,6 +21612,8 @@ MonoBehaviour:
   damage: 1
   knockback: 0
   isLoadCheck: 1
+  isBoulder: 0
+  secondsBeforeLoad: 0
 --- !u!1 &1559033122
 GameObject:
   m_ObjectHideFlags: 0
@@ -21701,12 +21647,6 @@ Transform:
   m_Father: {fileID: 1583485752}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1561374497 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4382667319691788462, guid: 0d4a395fa35440547a13ab2d5bbd93b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1360568767}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1563289829
 GameObject:
   m_ObjectHideFlags: 0
@@ -23480,6 +23420,11 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1593878160}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1593878162 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1593878160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1595493996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23505,7 +23450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 66277765688048, guid: 889fc48f97bc16d4f961519a20adb16f, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 66277765688048, guid: 889fc48f97bc16d4f961519a20adb16f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -23753,7 +23698,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2089620415}
@@ -23779,7 +23724,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -24015,7 +23959,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 2089620415}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -24510,7 +24453,7 @@ Transform:
   - {fileID: 441029193}
   - {fileID: 1465310956}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1654827459
 GameObject:
@@ -24652,8 +24595,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0d4a395fa35440547a13ab2d5bbd93b2, type: 3}
 --- !u!4 &1655205925 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4382667319691788462, guid: 0d4a395fa35440547a13ab2d5bbd93b2,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1655205924}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &1656394022
@@ -25061,14 +25003,14 @@ PrefabInstance:
       objectReference: {fileID: 384536678}
     - target: {fileID: 3709337916937824805, guid: 9dbf459f096c90246b638b90f865a58f,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 384536678}
-    - target: {fileID: 3709337916937824805, guid: 9dbf459f096c90246b638b90f865a58f,
-        type: 3}
       propertyPath: m_Colors.Array.size
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 3709337916937824805, guid: 9dbf459f096c90246b638b90f865a58f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 384536678}
     - target: {fileID: 3709337916937824805, guid: 9dbf459f096c90246b638b90f865a58f,
         type: 3}
       propertyPath: m_Colors.Array.data[0].a
@@ -25851,7 +25793,7 @@ Transform:
   m_LocalPosition: {x: 76.04739, y: 87.79939, z: 4.2287726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2067410987}
+  - {fileID: 630799824}
   - {fileID: 1625515656}
   - {fileID: 960988190}
   - {fileID: 638401753}
@@ -25871,10 +25813,10 @@ Transform:
   - {fileID: 1888864691}
   - {fileID: 1947001130}
   - {fileID: 483525988}
-  - {fileID: 991767631}
+  - {fileID: 632587096}
   - {fileID: 1545049774}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1727748779
 Mesh:
@@ -26294,7 +26236,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2023028268}
@@ -26320,7 +26262,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -26556,7 +26497,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 2023028268}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -27066,6 +27006,8 @@ MonoBehaviour:
   damage: 1
   knockback: 0
   isLoadCheck: 1
+  isBoulder: 0
+  secondsBeforeLoad: 0
 --- !u!1001 &1842387239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27220,7 +27162,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1098738512}
@@ -27246,7 +27188,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -27482,7 +27423,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1098738512}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -27672,7 +27612,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1302541184}
@@ -27698,7 +27638,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -27905,7 +27844,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1302541184}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -28277,7 +28215,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1421066837}
@@ -28303,7 +28241,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -28539,7 +28476,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1421066837}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -28588,7 +28524,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 490153944}
@@ -28614,7 +28550,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -28850,7 +28785,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 490153944}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -28968,7 +28902,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1396820931}
@@ -28994,7 +28928,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -29230,7 +29163,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1396820931}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -29964,8 +29896,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0d4a395fa35440547a13ab2d5bbd93b2, type: 3}
 --- !u!4 &2042149744 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4382667319691788462, guid: 0d4a395fa35440547a13ab2d5bbd93b2,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 2042149743}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2059209837
@@ -30048,14 +29979,8 @@ Transform:
   - {fileID: 1750259756}
   - {fileID: 621374741}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2067410987 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7134132593477267319, guid: 73095c7b9a9f79841a5e7a2177bed9c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 630799823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2088118736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30357,7 +30282,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 404523126}
@@ -30383,7 +30308,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -30619,7 +30543,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 404523126}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
