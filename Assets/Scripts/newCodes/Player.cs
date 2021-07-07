@@ -42,8 +42,11 @@ public class Player : MonoBehaviour ,ICollector , IHittable
     {
         _control.OnUpdate();
 
-        if (canAttackTimer <= 0) { canAttack = true; AttackRange.enabled = false; }
-            canAttackTimer -= Time.deltaTime;
+        if (canAttackTimer <= 0)
+        {
+            canAttack = true; AttackRange.enabled = false;
+        }
+        canAttackTimer -= Time.deltaTime;
     }
 
     #region Properties
@@ -58,25 +61,31 @@ public class Player : MonoBehaviour ,ICollector , IHittable
         set { canAttack = value; }
     }
     #endregion
+
     public void ResetTimerAttack()
     {
         canAttackTimer = 0.6f;
-
     }
+
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor") { IsGrounded = true; }
+        if (collision.gameObject.tag == "Floor")
+        {
+            IsGrounded = true;
+        }
     }
 
     public void GetHit(float damage)
     {
         if (shieldOn) return;
         _soundMananger.SoundPlay((int)2);
+
         if (life <= 0)
         {
             _animatorMananger.Die();
             this.enabled = false;
         }
+
         if (!invencibility) life -= damage;
         StartCoroutine(Invencibility(1f));
         _animatorMananger.GetHit();
