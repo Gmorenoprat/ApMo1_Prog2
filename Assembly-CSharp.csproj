@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\newCodes\JumpForceModifierTrigger.cs" />
     <Compile Include="Assets\Scripts\newCodes\MovingPatform.cs" />
     <Compile Include="Assets\Scripts\newCodes\Player.cs" />
+    <Compile Include="Assets\Scripts\newCodes\PositionReseter.cs" />
     <Compile Include="Assets\Scripts\newCodes\SpeedModifierTrigger.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PowerPot.cs" />

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour ,ICollector , IHittable
     public Collider AttackRange;
     public float life = 5;
     int _maxLifes = 5;
+    public bool isLoading = false;
     public bool invencibility = false;
     public Vector3 normalScale = new Vector3(1, 1, 1);
     public Vector3 smashedScale = new Vector3(1, 0.1f, 1);
@@ -147,14 +148,18 @@ public class Player : MonoBehaviour ,ICollector , IHittable
         this.apples += 1;
     }
     #endregion
+
     #region Checkpoint
     internal void SaveCheckPoint()
     {
         _control.SaveCheckPoint();
     }
+
     internal void LoadCheckPoint()
     {
+        isLoading = true;
         _control.LoadCheckPoint();
+        isLoading = false;
     }
     #endregion
 

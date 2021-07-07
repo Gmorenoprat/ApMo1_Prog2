@@ -5,10 +5,7 @@ using UnityEngine;
 public class FallingPlatformActivation : MonoBehaviour
 {
     public FallingPlatform fallingPlatform;
-
-    /// <summary>
-    /// @Author: Robert Juan Ignacio
-    /// </summary>
+    
     public void Start()
     {
         EventManager.SubscribeToEvent(EventsType.MOVINGPLATFORM_TRIGGER, ActivateFallingPlatform);
