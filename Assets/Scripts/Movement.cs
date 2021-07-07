@@ -21,12 +21,7 @@ public class Movement
     public float speedRight = 6f;
     public float rotSpeed = 6f;
 
-
-    /// <summary>
-    /// Author: Gonzalo Moreno Prat
-    /// SetSpeed
-    /// SetJumpForce
-    /// </summary>
+    
     #region GETSETERS
     public float SetSpeed
     {

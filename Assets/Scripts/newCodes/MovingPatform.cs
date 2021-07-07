@@ -7,10 +7,7 @@ public class MovingPatform : MonoBehaviour
     public float speed = 2;
     public Transform pos1, pos2;
     public GameObject player;
-
-    /// <summary>
-    /// @Author: Robert Juan Ignacio
-    /// </summary>
+    
     void Update()
     {
         Move();

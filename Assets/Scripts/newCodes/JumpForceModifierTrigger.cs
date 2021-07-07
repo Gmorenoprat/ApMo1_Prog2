@@ -3,9 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// @Author: Gonzalo Moreno Prat
-/// </summary>
 [RequireComponent(typeof(Collider))]
 public class JumpForceModifierTrigger : MonoBehaviour
 {

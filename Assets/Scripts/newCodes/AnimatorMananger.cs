@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Author: Robert Juan Ignacio
-/// </summary>
 
 public class AnimatorMananger 
 {

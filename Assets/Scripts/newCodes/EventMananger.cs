@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-/// <summary>
-/// @Author: Gonzalo Moreno Prat
-/// cp de ModelosYAlgoritmosI
-/// edit: if(overwrite) _events[eventType] = listener;
-/// </summary>
 public class EventManager : MonoBehaviour
 {
     public delegate void EventReceiver(params object[] parameterContainer);

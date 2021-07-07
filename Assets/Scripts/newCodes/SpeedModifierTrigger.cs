@@ -1,8 +1,5 @@
 ﻿using UnityEngine;
 
-/// <summary>
-/// @Author: Gonzalo Moreno Prat
-/// </summary>
 [RequireComponent(typeof(Collider))]
 public class SpeedModifierTrigger : MonoBehaviour
 {

@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        if(player.life <= 0)
+        if(player != null && player.life <= 0)
         {
             Invoke("GameOver", 2f);
         }

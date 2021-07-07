@@ -6,10 +6,7 @@ public class FallingPlatform : MonoBehaviour
 {
     public bool isFalling = false;
     public float downSpeed;
-
-    /// <summary>
-    /// @Author: Robert Juan Ignacio
-    /// </summary>
+    
     void Update()
     {
         Move();
