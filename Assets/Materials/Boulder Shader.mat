@@ -34,7 +34,7 @@ Material:
     m_Floats:
     - _Float0: -0.09
     - _Float1: 0.47
-    - __dirty: 0
+    - __dirty: 1
     - _tilingx1: 0.14153716
     - _tilingy1: 0.28194106
     m_Colors:

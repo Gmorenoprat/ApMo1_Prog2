@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3918628633370931954}
   - component: {fileID: 3918628633370931949}
   - component: {fileID: 3918628633370931948}
+  - component: {fileID: 6746982712515938204}
   m_Layer: 0
   m_Name: CheckPointActivator
   m_TagString: Untagged
@@ -45,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f16189bedbe09354a8d8a418bcf649f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkYaActivado: 0
   playersound: {fileID: 3918628633370931948}
 --- !u!65 &3918628633370931949
 BoxCollider:
@@ -155,3 +157,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6746982712515938204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3918628633370931951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b25357c61fade49bb69aad4bbdb32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winMenu: {fileID: 0}
