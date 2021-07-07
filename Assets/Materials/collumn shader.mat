@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Float1: 0.16
+    - _Float1: 0.15
     - _Float2: 0.16
     - __dirty: 0
     - _intensity1: 0.65
-    - _tilingx: 0.7024563
+    - _tilingx: 1
     - _tilingx1: 0.7024563
     - _tilingy: 1
     - _tilingy1: 1

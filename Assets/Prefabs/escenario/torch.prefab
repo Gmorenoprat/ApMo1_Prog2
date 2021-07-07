@@ -222,6 +222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7b52fa3c29b3b48be1a68568447805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  lights:
+  - {fileID: 7259763830395136158}
+  distanceToLight: 30
 --- !u!1 &7259763830395136158
 GameObject:
   m_ObjectHideFlags: 0

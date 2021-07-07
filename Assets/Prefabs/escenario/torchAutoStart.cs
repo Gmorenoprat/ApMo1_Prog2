@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class torchAutoStart : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject player;
+    public GameObject[] lights;
+    public float distanceToLight = 15;
+    
+    public void Awake()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        if(player != null)
+        {
+            if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) < distanceToLight)
+            {
+                foreach (GameObject light in lights)
+                {
+                    light.SetActive(true);
+                }
+            }
+            else
+            {
+                foreach (GameObject light in lights)
+                {
+                    light.SetActive(false);
+                }
+            }
+        }
     }
 }

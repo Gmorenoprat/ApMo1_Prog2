@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 721963908384766471}
   - component: {fileID: 721963908384766470}
   - component: {fileID: 9196969179886290903}
+  - component: {fileID: 3305719110144041158}
+  - component: {fileID: 585647977332925484}
   m_Layer: 0
   m_Name: 'Pozo grande '
   m_TagString: Untagged
@@ -285,6 +287,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 19.2755, y: 1.2336311, z: 22.90823}
   m_Center: {x: 2, y: -5.596884, z: 1.5}
+--- !u!114 &3305719110144041158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721963908384766468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7b52fa3c29b3b48be1a68568447805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  lights:
+  - {fileID: 9017992415788849765}
+  - {fileID: 6013675721314564925}
+  - {fileID: 3492162900741134741}
+  - {fileID: 1144795567838818084}
+  - {fileID: 1714824053318965559}
+  distanceToLight: 30
+--- !u!114 &585647977332925484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721963908384766468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1feb6a9fb4c9fc949a6983cb45f44bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  knockback: 0
+  isLoadCheck: 1
+  isBoulder: 0
+  secondsBeforeLoad: 0
 --- !u!1 &1144795567838818084
 GameObject:
   m_ObjectHideFlags: 0

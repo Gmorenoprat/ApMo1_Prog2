@@ -34,9 +34,9 @@ Material:
     m_Floats:
     - _Float0: -0.09
     - _Float1: 0.47
-    - __dirty: 1
+    - __dirty: 0
     - _tilingx1: 0.14153716
     - _tilingy1: 0.28194106
     m_Colors:
-    - _Color0: {r: 0.49261302, g: 0.61905044, b: 0.7735849, a: 0}
+    - _Color0: {r: 0.29271984, g: 0.35637844, b: 0.4339623, a: 0}
     - _Vector0: {r: 0.37, g: 0.61, b: 0.43, a: 0}
