@@ -21,7 +21,7 @@ public class winCondition : MonoBehaviour
 
     public IEnumerator mostrarBotones()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(3);
         buttons.gameObject.SetActive(true);
         yield return null;
     }

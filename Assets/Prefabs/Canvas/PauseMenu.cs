@@ -12,6 +12,11 @@ public class PauseMenu : MonoBehaviour
 
     public Player player;
 
+    public void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

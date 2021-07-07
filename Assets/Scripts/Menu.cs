@@ -13,18 +13,26 @@ public class Menu : MonoBehaviour
 
     public void QuitGame()
     {
-        
         Debug.Log("QUIT");
         Application.Quit();
-
-
     }
 
     public void BackToMenu()
     {
         Time.timeScale = 1f;
-
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Restart()
+    {
+        string activeScene;
+        activeScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(activeScene);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene("Level2");
     }
  
 }
